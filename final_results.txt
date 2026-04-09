@@ -1,0 +1,44 @@
+Intracranial Hemorrhage Detection - Final Results
+
+-----------------------------------------------
+Model: EfficientNet-B0
+Framework: PyTorch
+
+Configuration:
+- Loss Function: Weighted CrossEntropy
+- Optimizer: Adam (lr = 1e-4)
+- Scheduler: ReduceLROnPlateau
+- Threshold: 0.6
+- Epochs: 10
+- Image Size: 224x224
+
+-----------------------------------------------
+Final Test Results:
+
+Accuracy:     0.9574
+Precision:    0.8000
+Recall:       0.8333
+F1-score:     0.8163
+Specificity:  0.9733
+
+-----------------------------------------------
+Confusion Matrix:
+
+[[TN FP]
+ [FN TP]]
+
+[[365   10]
+ [  8   40]]
+
+-----------------------------------------------
+Interpretation:
+
+- The model achieves high accuracy and balanced precision-recall.
+- Recall is prioritized to minimize missed hemorrhage cases.
+- Precision is improved using threshold tuning.
+- High specificity indicates strong normal-case detection.
+
+-----------------------------------------------
+Conclusion:
+
+This model provides a reliable balance between sensitivity and specificity, making it suitable for medical screening applications.
